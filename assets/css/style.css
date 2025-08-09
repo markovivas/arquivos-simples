@@ -1,0 +1,278 @@
+/* Simple File List Styles */
+.sfl-upload-container {
+    background: #fff;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.sfl-upload-container h2 {
+    color: var(--azul-principal);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.sfl-upload-area {
+    border: 2px dashed var(--azul-claro);
+    border-radius: var(--borda-radius);
+    padding: 30px;
+    text-align: center;
+    transition: var(--transicao);
+    margin-bottom: 20px;
+}
+
+.sfl-upload-area:hover {
+    border-color: var(--azul-brilhante);
+    background-color: rgba(0, 166, 251, 0.05);
+}
+
+.sfl-browse-btn {
+    background: var(--azul-principal);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transicao);
+    margin-bottom: 15px;
+}
+
+.sfl-browse-btn:hover {
+    background: var(--azul-brilhante);
+    transform: translateY(-2px);
+}
+
+.sfl-upload-details {
+    margin-top: 20px;
+    color: var(--azul-escuro);
+    font-size: 0.9rem;
+}
+
+.sfl-upload-details p {
+    margin: 5px 0;
+}
+
+.sfl-file-meta {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.sfl-meta-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.sfl-meta-fields label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--azul-escuro);
+}
+
+.sfl-meta-fields input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--cinza);
+    border-radius: var(--borda-radius);
+    transition: var(--transicao);
+}
+
+.sfl-meta-fields input:focus {
+    border-color: var(--azul-brilhante);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 166, 251, 0.2);
+}
+
+.sfl-upload-btn {
+    background: var(--verde);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transicao);
+}
+
+.sfl-upload-btn:hover {
+    background: #3d8b40;
+    transform: translateY(-2px);
+}
+
+.sfl-progress {
+    margin-top: 20px;
+    background: var(--cinza);
+    border-radius: 20px;
+    height: 10px;
+    position: relative;
+}
+
+.sfl-progress-bar {
+    background: var(--azul-brilhante);
+    border-radius: 20px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.sfl-progress-text {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    font-size: 0.8rem;
+    color: var(--azul-escuro);
+}
+
+.sfl-file-list {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sfl-file-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra);
+}
+
+.sfl-file-list th {
+    background: var(--azul-principal);
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.sfl-file-list th, .sfl-file-list td {
+    vertical-align: middle;
+}
+
+.sfl-file-list td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--cinza);
+}
+
+.sfl-file-list tr:last-child td {
+    border-bottom: none;
+}
+
+.sfl-file-list tr:hover {
+    background-color: rgba(0, 100, 148, 0.05);
+}
+
+.sfl-file-description {
+    margin: 5px 0 0;
+    color: var(--azul-claro);
+    font-size: 0.9rem;
+}
+
+.sfl-file-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.sfl-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--azul-principal);
+    color: #fff !important; /* texto branco */
+    border: none;
+    border-radius: var(--borda-radius);
+    padding: 7px 16px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none !important; /* remove underline */
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.sfl-action-link:last-child {
+    margin-right: 0;
+}
+
+.sfl-action-link:hover {
+    background: var(--azul-brilhante);
+    color: #fff !important; /* mantém texto branco no hover */
+    text-decoration: none !important; /* garante sem underline no hover */
+    box-shadow: 0 2px 8px rgba(0,166,251,0.08);
+}
+
+/* Opcional: Adicione ícones usando Dashicons */
+.sfl-action-link[data-action="abrir"]::before {
+    font-family: "Dashicons";
+    content: "\f179";
+    font-size: 1.1em;
+    margin-right: 4px;
+}
+.sfl-action-link[data-action="baixar"]::before {
+    font-family: "Dashicons";
+    content: "\f316";
+    font-size: 1.1em;
+    margin-right: 4px;
+}
+.sfl-action-link[data-action="copiar"]::before {
+    font-family: "Dashicons";
+    content: "\f481";
+    font-size: 1.1em;
+    margin-right: 4px;
+}
+
+/* Drag and drop styles */
+.sfl-upload-area.drag-over {
+    background-color: rgba(0, 166, 251, 0.1);
+    border-color: var(--azul-brilhante);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sfl-meta-fields {
+        grid-template-columns: 1fr;
+    }
+    
+    .sfl-file-actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+.sfl-file-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 32px;
+    color: #0073aa;
+}
+
+.sfl-filter-form {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    padding: 0;
+}
+.sfl-filter-form label {
+    margin: 0;
+    color: var(--azul-principal); /* azul para o label */
+    font-weight: 600;
+}
+
+.sfl-filter-form select {
+    padding: 6px 12px;
+    border-radius: var(--borda-radius);
+    border: 1px solid var(--cinza);
+    margin-left: 0;
+    color: #222; /* preto para o texto das opções */
+    background: #fff;
+    font-weight: 500;
+}

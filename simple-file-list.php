@@ -1,12 +1,11 @@
 <?php
 /*
-Plugin Name: Simple File List
-Plugin URI: https://yourwebsite.com/simple-file-list
-Description: A simple file management system for WordPress with upload capabilities.
+Plugin Name: Gerenciador de arquivos
+Description: Um sistema simples de gerenciamento de arquivos para WordPress com recursos de upload.
 Version: 1.0
-Author: Your Name
-Author URI: https://yourwebsite.com
+Author: Marco Antonio Vivas
 License: GPL2
+Plugin URI:
 */
 
 // Security check

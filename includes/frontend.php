@@ -70,7 +70,7 @@ function sfl_render_file_list() {
         <table>
             <thead>
                 <tr>
-                    <th colspan="7" style="background: #f7fafd; padding: 16px 15px;">
+                    <th colspan="<?php echo current_user_can('upload_files') ? '8' : '7'; ?>" style="background: #f7fafd; padding: 16px 15px;">
                         <form method="get" class="sfl-filter-form" style="margin:0; display: flex; align-items: center; gap: 10px;">
                             <label for="sfl_categoria" style="margin:0;"><strong>Filtrar por categoria:</strong></label>
                             <select name="sfl_categoria" id="sfl_categoria" onchange="this.form.submit()">
@@ -98,6 +98,9 @@ function sfl_render_file_list() {
                     <th>Data</th>
                     <th>Abrir</th>
                     <th>Baixar</th>
+                    <?php if (current_user_can('upload_files')): ?>
+                    <th>Ações</th>
+                    <?php endif; ?>
                 </tr>
             </thead>
             <tbody>
@@ -127,6 +130,11 @@ function sfl_render_file_list() {
                     </td>
                     <td>
                         <a href="<?php echo esc_url($file->file_url); ?>" download class="sfl-action-link" data-action="baixar">Baixar</a>
+                    </td>
+                    <td>
+                        <?php if (current_user_can('upload_files')): ?>
+                            <button class="sfl-action-link sfl-delete-file" data-file-id="<?php echo $file->id; ?>" data-action="excluir">Excluir</button>
+                        <?php endif; ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

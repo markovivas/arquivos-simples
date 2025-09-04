@@ -1,4 +1,4 @@
-# Simple File List
+# Arquivos Simples
 
 Um plugin simples para WordPress que permite o envio, organização e listagem de arquivos com categorias.
 
